@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="559.0" style="-fx-background-color: #18486d;" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jmjhw9sequencer.PianoController">
+   <children>
+      <MenuBar layoutX="-1.0" prefHeight="25.0" prefWidth="559.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleLoad" text="Load Sequence" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveSequence" text="Save Sequence" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAboutPiano" text="Piano Sequencer Instructions" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAboutMe" text="About the Developer" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Instrument">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleChangeInstrument" text="Change Instrument" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox fx:id="hbox" layoutY="300.0" prefHeight="100.0" prefWidth="569.0">
+         <children>
+            <Rectangle fx:id="keyC0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyD" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyE" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyG" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyA" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyB" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="71.0" />
+            <Rectangle fx:id="keyC1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="62.0" />
+         </children>
+      </HBox>
+      <AnchorPane layoutY="215.0" prefHeight="149.0" prefWidth="569.0">
+         <children>
+            <StackPane layoutX="20.0" layoutY="122.0" prefHeight="33.0" prefWidth="24.0">
+               <children>
+                  <Label layoutX="25.0" text="C" />
+               </children>
+            </StackPane>
+            <Rectangle fx:id="keyDb" arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="93.0" layoutX="44.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+            <StackPane layoutX="44.0" layoutY="40.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="Db" />
+               </children>
+            </StackPane>
+            <Rectangle fx:id="keyEb" arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="93.0" layoutX="116.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+            <StackPane layoutX="89.0" layoutY="123.0" prefHeight="33.0" prefWidth="30.0">
+               <children>
+                  <Label text="D" />
+               </children>
+            </StackPane>
+            <Rectangle fx:id="keyGb" arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="93.0" layoutX="260.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+            <Rectangle fx:id="keyAb" arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="93.0" layoutX="330.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+            <Rectangle fx:id="keyBb" arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="93.0" layoutX="403.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+            <StackPane layoutX="116.0" layoutY="39.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="Eb" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="220.0" layoutY="93.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="F" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="260.0" layoutY="40.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="Gb" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="295.0" layoutY="93.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="G" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="330.0" layoutY="39.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="Ab" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="368.0" layoutY="90.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="A" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="403.0" layoutY="39.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="Bb" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="437.0" layoutY="90.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="B" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="505.0" layoutY="93.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="C" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="154.0" layoutY="93.0" prefHeight="93.0" prefWidth="50.0">
+               <children>
+                  <Label text="E" />
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="111.0" prefHeight="189.0" prefWidth="559.0">
+         <children>
+            <Label layoutX="22.0" layoutY="165.0" text="A" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="115.0" text="W" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="115.0" text="E" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="180.0" layoutY="166.0" text="D" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="166.0" text="F" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="166.0" text="S" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="276.0" layoutY="123.0" text="T" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="315.0" layoutY="166.0" prefHeight="15.0" prefWidth="9.0" text="G" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="123.0" text="Y" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="388.0" layoutY="164.0" text="H" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="423.0" layoutY="123.0" text="U" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="465.0" layoutY="164.0" text="J" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="522.0" layoutY="165.0" text="K" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="recordBtn" layoutX="176.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleRecord" prefHeight="25.0" prefWidth="54.0" text="Record" />
+      <Button fx:id="clearBtn" layoutX="338.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+      <Button fx:id="playBtn" layoutX="260.0" layoutY="103.0" mnemonicParsing="false" onAction="#handlePlay" onMouseClicked="#handlePlay" text="Play" />
+      <TextArea fx:id="compositionContent" layoutX="176.0" layoutY="142.0" prefHeight="51.0" prefWidth="205.0" />
+      <Circle fx:id="recordEnabled" fill="#b20909" layoutX="152.0" layoutY="116.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

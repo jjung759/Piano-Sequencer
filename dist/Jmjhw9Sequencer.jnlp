@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Jmjhw9Sequencer.jnlp">
+  <information>
+    <title>Jmjhw9Sequencer</title>
+    <vendor>Jim</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Jmjhw9Sequencer.jar" size="543806" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Jmjhw9Sequencer" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="jmjhw9sequencer.Jmjhw9Sequencer"  name="Jmjhw9Sequencer" />
+  <update check="always"/>
+</jnlp>
